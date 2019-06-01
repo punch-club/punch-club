@@ -19,5 +19,8 @@
   "homepage": "https://github.com/punch-club/punch-club#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0"
   }
 }
