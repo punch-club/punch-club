@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+    <link rel="stylesheet" href="registerStyle.css">
+</head>
+<body>
+    <div class="register">
+        <img class="logo" src="Punch Club.png">
+        <form action="POST" class="center">
+            <input id="login" type="text" value="Логин" onblur="if(this.value == '') this.value = 'Логин'" onfocus="if(this.value == 'Логин') this.value = ''" required>
+            <input id="password" type="text" value="Пароль" onblur="if(this.value == '') this.value = 'Пароль'" onfocus="if(this.value == 'Пароль') this.value = ''" required>
+            <input id="repeatPassword" type="text" value="Повтор пароля" onblur="if(this.value == '') this.value = 'Повтор пароля'" onfocus="if(this.value == 'Повтор пароля') this.value = ''" required>
+            <br>
+            <button class="submitBtn" type="submit">Зарегистрироваться</button>
+        </form>
+    </div>
+</body>
+</html>
