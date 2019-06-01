@@ -1,3 +1,5 @@
 Для запуска приложения выполните  
-`npm install`  
-`npm start`
+```
+npm install  
+npm start
+```
