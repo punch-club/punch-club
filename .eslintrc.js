@@ -9,12 +9,12 @@ module.exports = {
         'ecmaVersion': 2017
     },
     rules: {
-        'semi': error,
+        'semi': 'error',
         'quotes': ['error', 'single', {'allowTemplateLiterals': true}],
         'indent': ['error', 4],
         'max-len': ['error', {'code': 80, 'tabWidth': 4}],
         'camelcase': 'error',
-        'coma-style': ['error', 'last'],
+        'comma-style': ['error', 'last'],
         'no-unused-vars': 'error',
         'array-bracket-spacing': ['error', 'never'],
         'eqeqeq': ['error', 'always'],
