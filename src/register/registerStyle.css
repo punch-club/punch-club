@@ -2,7 +2,7 @@ body {
     margin: 0
 }
 
-.logo{
+.register__logo{
     max-width: 150px;
     max-height: 150px;
     margin-top: 30px;
@@ -11,57 +11,53 @@ body {
 .register{
     width: 300px;
     height: 450px; 
-    border: 1px solid crimson;
+    border: 1px solid #C6132B;
     text-align: center;
 }
 
-.center{
+.register__form{
     text-align: center
 }
 
-#login{
+.register__form_login{
     width: 170px;
     height: 35px;
     margin-top: 30px;
     border-radius: 15px;
-    border: 1px solid crimson;
+    border: 1px solid #E07785;
     padding: 0 15px;
     color: grey
 }
 
-#password{
+.register__form_password{
     width: 170px;
     height: 35px;
     margin-top: 5px;
     border-radius: 15px;
-    border: 1px solid crimson;
+    border: 1px solid #E07785;
     padding: 0 15px;
     color: grey
 
 }
 
-#repeatPassword{
+.register__form_confirm{
     width: 170px;
     height: 35px;
     margin-top: 5px;
     margin-left: 4px;
     border-radius: 15px;
-    border: 1px solid crimson;
+    border: 1px solid #E07785;
     padding: 0 15px;
     color: grey
 
 }
 
-.submitBtn{
+.register__button{
     width: 200px;
     height: 35px;
     margin-top: 20px;
     border-radius: 15px;
-    background-color: crimson;
+    background-color: #C6132B;
     color: white; 
-    border: 1px solid crimson;
-}
-
-.fontawesome-user:before{
-    content: "\f007";
+    border: 1px solid #C6132B;
 }
