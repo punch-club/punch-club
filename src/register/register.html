@@ -10,10 +10,10 @@
 <body>
     <div class="register">
         <img class="register__logo" src="Punch Club.png">
-        <form action="POST" class="register__form">
-            <input id="login" type="text" class="register__form_login" value="Логин" onblur="if(this.value == '') this.value = 'Логин'; this.color ='grey'" onfocus="if(this.value == 'Логин') this.value = ''; this.color = 'black'" required>
-            <input id="password" type="text" class="register__form_password" value="Пароль" onblur="if(this.value == '') this.value = 'Пароль'" onfocus="if(this.value == 'Пароль') this.value = ''" required>
-            <input id="repeatPassword" type="text" class="register__form_confirm" value="Повтор пароля" onblur="if(this.value == '') this.value = 'Повтор пароля'" onfocus="if(this.value == 'Повтор пароля') this.value = ''" required>
+        <form action="#" method="POST" class="register__form">
+            <input id="login" type="text" class="register__form_login" placeholder="Логин"  required>
+            <input id="password" type="text" class="register__form_password" placeholder="Пароль" required>
+            <input id="repeatPassword" type="text" class="register__form_confirm" placeholder="Повтор пароля" required>
             <button class="register__button" type="submit">Зарегистрироваться</button>
         </form>
     </div>

@@ -35,7 +35,6 @@
     border-radius: 15px;
     border: 1px solid #E07785;
     padding: 0 15px;
-    color: grey
 }
 
 .register__form_password{
@@ -45,8 +44,6 @@
     border-radius: 15px;
     border: 1px solid #E07785;
     padding: 0 15px;
-    color: grey
-
 }
 
 .register__form_confirm{
@@ -56,8 +53,6 @@
     border-radius: 15px;
     border: 1px solid #E07785;
     padding: 0 15px;
-    color: grey
-
 }
 
 .register__button{
