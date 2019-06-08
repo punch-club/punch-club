@@ -10,17 +10,21 @@ registerForm.addEventListener('submit', function(event){
         url = url + 'login';
     } else {
         url = url + 'register';
-    }
-
+    };
+    console.log(login.value);
+    console.log(password.value)
     fetch(url, {
-        method: 'post',
+        method: 'POST',
         headers: {  
             "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"  
           },  
-          body: {
-              username: login.value,
-              password: password.value
-          }  
+          body: 'username='+ login.value + '&password=' + password.value
+        })
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        console.log(data);
     })
 });
 
