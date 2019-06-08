@@ -1,3 +1,9 @@
+h1{
+    margin: 0;
+    text-decoration: none;
+    font-size: 12px;
+}
+
 .register{
     position: absolute;
     align-items: center;
@@ -28,25 +34,7 @@
     flex-wrap: wrap;
 }
 
-.register__form_login{
-    width: 170px;
-    height: 35px;
-    margin-top: 30px;
-    border-radius: 15px;
-    border: 1px solid #E07785;
-    padding: 0 15px;
-}
-
-.register__form_password{
-    width: 170px;
-    height: 35px;
-    margin-top: 5px;
-    border-radius: 15px;
-    border: 1px solid #E07785;
-    padding: 0 15px;
-}
-
-.register__form_confirm{
+.register__input{
     width: 170px;
     height: 35px;
     margin-top: 5px;
@@ -59,9 +47,21 @@
     width: 200px;
     height: 35px;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     border-radius: 15px;
     background-color: #C6132B;
     color: white; 
     border: 2px solid #C6132B;
+}
+
+.register__AccQuestion{
+    color: grey;
+}
+
+a.register__SignInMode:active, /* активная/посещенная ссылка */
+a.register__SignInMode:hover,  /* при наведении */
+a.register__SignInMode {
+    font-size: 12px;
+    text-decoration: none;
+    color: #C6132B;
 }
