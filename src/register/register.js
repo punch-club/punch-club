@@ -1,23 +1,33 @@
 // TODO обработчик сабмит на форму, режим тру-фолс
 var registerForm = document.querySelector('.register__form');
-registerForm.addEventListener('submit', function(){
+registerForm.addEventListener('submit', function(event){
+    event.preventDefault()
     var login = document.querySelector('.login');
     var password = document.querySelector('.password');
 
     var url = 'http://localhost:3333/'
     if (register === true){
-        url = url + 'register';
-    } else {
         url = url + 'login';
+    } else {
+        url = url + 'register';
     }
+
+    fetch(url, {
+        method: 'post',
+        headers: {  
+            "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"  
+          },  
+          body: {
+              username: login.value,
+              password: password.value
+          }  
+    })
 });
 
 var register = false;
 var registerMode = document.querySelector('.register__SignInMode');
 registerMode.addEventListener('click', function(){
-    console.log('here');
     register = !register;
-    console.log(register)
     if (register === true){   
         document.querySelector('.register__AccQuestion').textContent = 'Нет аккаунта?';
         document.querySelector('.register__SignInMode').textContent = 'Зарегистрироваться';
