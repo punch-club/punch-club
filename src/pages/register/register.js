@@ -18,9 +18,9 @@ registerForm.addEventListener('submit', function(event){
         },  
         body: 'username='+ login.value + '&password=' + password.value
     })
-.then(function(response){
-    return response.json();
-})
+        .then(function(response){
+            return response.json();
+        });
 });
 
 var register = false;
@@ -29,18 +29,18 @@ registerMode.addEventListener('click', function(){
     register = !register;
     if (register === true){   
         document.querySelector('.register__AccQuestion')
-        .textContent = 'Нет аккаунта?';
+            .textContent = 'Нет аккаунта?';
         document.querySelector('.register__SignInMode')
-        .textContent = 'Зарегистрироваться';
+            .textContent = 'Зарегистрироваться';
         document.querySelector('.register__button')
-        .textContent = 'Войти';
+            .textContent = 'Войти';
     }
     if (register === false) {
         document.querySelector('.register__AccQuestion')
-        .textContent = 'Есть аккаунт?';
+            .textContent = 'Есть аккаунт?';
         document.querySelector('.register__SignInMode')
-        .textContent = 'Авторизация';
+            .textContent = 'Авторизация';
         document.querySelector('.register__button')
-        .textContent = 'Зарегистрироваться';
+            .textContent = 'Зарегистрироваться';
     }
 });
