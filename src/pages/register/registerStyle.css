@@ -1,0 +1,67 @@
+h1{
+    margin: 0;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.register{
+    position: absolute;
+    align-items: center;
+    align-content: center; 
+    justify-content: center;
+    width: 100%;
+    height: 85%; 
+    top: 15%;
+    left: 0;
+    min-width: 200px;
+    text-align: center;
+}
+
+.register__logo{
+    max-width: 150px;
+    max-height: 150px;
+    margin-top: 30px;
+    top: 50%;
+}
+
+.register__form{
+    text-align: center;
+    align-items: center;
+    align-content: center; 
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.register__input{
+    width: 170px;
+    height: 35px;
+    margin-top: 5px;
+    border-radius: 15px;
+    border: 1px solid #E07785;
+    padding: 0 15px;
+}
+
+.register__button{
+    width: 200px;
+    height: 35px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    background-color: #C6132B;
+    color: white; 
+    border: 2px solid #C6132B;
+}
+
+.register__AccQuestion{
+    color: grey;
+}
+
+a.register__SignInMode:active, /* активная/посещенная ссылка */
+a.register__SignInMode:hover,  /* при наведении */
+a.register__SignInMode {
+    font-size: 12px;
+    text-decoration: none;
+    color: #C6132B;
+}
