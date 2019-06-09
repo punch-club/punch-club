@@ -6,11 +6,7 @@ registerForm.addEventListener('submit', function(event){
     var password = document.querySelector('.password');
 
     var url = 'http://localhost:3333/';
-    if (register){
-        url = url + 'login';
-    } else {
-        url = url + 'register';
-    }
+    url+= register ? 'login' : 'register';
     fetch(url, {
         method: 'POST',
         headers: {  
