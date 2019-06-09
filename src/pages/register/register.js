@@ -6,7 +6,7 @@ registerForm.addEventListener('submit', function(event){
     var password = document.querySelector('.password');
 
     var url = 'http://localhost:3333/';
-    if (register === true){
+    if (register){
         url = url + 'login';
     } else {
         url = url + 'register';
@@ -27,15 +27,14 @@ var register = false;
 var registerMode = document.querySelector('.register__SignInMode');
 registerMode.addEventListener('click', function(){
     register = !register;
-    if (register === true){   
+    if (register){   
         document.querySelector('.register__AccQuestion')
             .textContent = 'Нет аккаунта?';
         document.querySelector('.register__SignInMode')
             .textContent = 'Зарегистрироваться';
         document.querySelector('.register__button')
             .textContent = 'Войти';
-    }
-    if (register === false) {
+    } else {
         document.querySelector('.register__AccQuestion')
             .textContent = 'Есть аккаунт?';
         document.querySelector('.register__SignInMode')
