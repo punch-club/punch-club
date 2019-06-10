@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/punch-club/punch-club#readme",
   "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.2.10",
     "express": "^4.17.1"
   },
   "devDependencies": {

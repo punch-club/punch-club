@@ -1,0 +1,22 @@
+.personage {
+  background-color: #fd7c7c;
+  box-sizing: border-box;
+  width: 320px;
+  height: 480px;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.personage__name {
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: green;
+  margin: 0;
+}
+.personage__hp {
+  background-color: blue;
+}
+.personage__view {
+  background-color: gray;
+}
