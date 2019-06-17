@@ -1,0 +1,30 @@
+.actions{
+    display: flex;
+    width: 450px;
+    justify-content: center;
+}
+
+.actions__block{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 5px;
+    color: grey;
+}
+
+.actions__block-name{
+    font-size: 16px;
+    color: grey;
+    text-align: center;
+}
+
+.actions__img{
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.line{
+    width: 1px;
+    height: 135px;
+    background-color: grey;
+}
