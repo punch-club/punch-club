@@ -1,0 +1,102 @@
+.msg__right-margin {
+    margin-right: 15px;
+}
+
+.battle-log__container {
+    border: 2px solid #EAEAEA;
+    border-radius: 3px;
+    padding: 20px;
+    padding-bottom: 10px;
+}
+
+.battle-log__msg {
+    display: flex;
+
+    margin-bottom: 10px;
+}
+
+.battle-log__msg_enemy {
+    justify-content: flex-end;
+}
+
+.msg__element {
+    margin: 0 5px;
+}
+
+.msg__player-icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #C4C4C4;
+}
+
+.msg__body {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #F3F3F3;
+}
+
+.msg__body_you {
+    border-top-left-radius: 0;
+}
+
+.msg__body_enemy {
+    border-top-right-radius: 0;
+}
+
+.msg__nickname {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.msg__nickname_right {
+    text-align: right;
+}
+
+.msg__content {
+    display: flex;
+    align-items: center;
+}
+
+.msg__text {
+    margin-right: 5px;
+}
+
+.msg__text_attack::before {
+    content: 'Удар в ';
+}
+
+.msg__text_block::before {
+    content: 'Удар заблокирован';
+}
+
+.msg__text_loss {
+    font-weight: bold;
+}
+
+.msg__text_loss::before {
+    font-weight: normal;
+    content: 'Удар пропущен. Потеряно ';
+}
+
+.msg__text_loss::after {
+    font-weight: normal;
+    content: ' HP';
+}
+
+/* icons */
+.msg__icon_head {
+    content: url('./img/icon_head.png');
+}
+
+.msg__icon_body {
+    content: url('./img/icon_body.png');
+}
+
+.msg__icon_belt {
+    content: url('./img/icon_belt.png');
+}
+
+.msg__icon_legs {
+    content: url('./img/icon_legs.png');
+}
