@@ -8,6 +8,8 @@ class PersonageStatus extends HTMLElement {
 
         const template = thisDocument.querySelector('#tmpl-personage-status');
         shadowRootEl.appendChild(template.content.cloneNode(true));
+
+        
     }
 };
 

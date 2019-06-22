@@ -1,22 +1,43 @@
 .personage {
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #fd7c7c;
   box-sizing: border-box;
-  width: 320px;
-  height: 480px;
-  padding: 2%;
+  width: 500px;
+  height: 850px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 .personage__name {
-  font-size: 1rem;
+  font-size: 2.3rem;
   font-weight: bold;
-  background-color: green;
-  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  margin: 0 4%;
+  height: 8%;
+  flex-grow: 1;
+  align-items: flex-end;
+  padding-bottom: 2%;
 }
 .personage__hp {
-  background-color: blue;
+  background-repeat: no-repeat;
+  background-color: #EAEAEA;
+  background-clip: border-box;
+  background-image: linear-gradient(to right, #96EE26 50%, #EAEAEA 50%);
+  background-size: 140%;
+  height: 7.5%;
+  margin: 0 4%;
+  border-radius: 2.5% / 16%;
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  padding-right: 4%;
+  justify-content: flex-end;
 }
 .personage__view {
-  background-color: gray;
+  background-color: #EAEAEA;
+  height: 78%;
+  margin: 4%;
+  border-radius: 2.5% / 1.7%;
 }
