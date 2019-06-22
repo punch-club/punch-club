@@ -61,11 +61,13 @@ class BattleLog extends HTMLElement {
                 }
 
                 // атака
-                const atackMsg = this.getAttackMsg(atackMsgTmpl, atackName, item.hit);
+                const atackMsg = this.getAttackMsg(atackMsgTmpl, atackName, 
+                    item.hit);
                 msgContainer.appendChild(atackMsg);
 
                 // блок
-                const blockMsg = this.getBlockMsg(blockMsgTmpl, blockName, diffHp);
+                const blockMsg = this.getBlockMsg(blockMsgTmpl, blockName, 
+                    diffHp);
                 msgContainer.appendChild(blockMsg);    
                 
             });
@@ -79,7 +81,8 @@ class BattleLog extends HTMLElement {
     getAttackMsg(tmpl, nickName, hit) {
         tmpl.querySelector('.msg__nickname').textContent = nickName;
         tmpl.querySelector('.msg__text').classList.add('msg__text_attack');
-        tmpl.querySelector('.msg__icon').classList.add(this.getMsgIconClass(hit));
+        tmpl.querySelector('.msg__icon').classList
+            .add(this.getMsgIconClass(hit));
 
 
         return tmpl;
@@ -87,16 +90,20 @@ class BattleLog extends HTMLElement {
 
     getMsgIconClass(hit) {
         switch (hit) {
-            case 1:
-                return 'msg__icon_head';
-            case 2:
-                return 'msg__icon_body';
-            case 3:
-                return 'msg__icon_belt';
-            case 4:
-                return 'msg__icon_legs';        
-            default:
-                return '';
+        // eslint-disable-next-line
+        case 1:
+            return 'msg__icon_head';
+        // eslint-disable-next-line
+        case 2:
+            return 'msg__icon_body';
+        // eslint-disable-next-line
+        case 3:
+            return 'msg__icon_belt';
+        // eslint-disable-next-line
+        case 4:
+            return 'msg__icon_legs';        
+        default:
+            return '';
         }
     }
 
@@ -113,6 +120,6 @@ class BattleLog extends HTMLElement {
         return tmpl;
     }
 
-};
+}
 
 customElements.define('battle-log', BattleLog);
