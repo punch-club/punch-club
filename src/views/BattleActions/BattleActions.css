@@ -36,9 +36,19 @@
 }
 
 .button__block{
-    width: 450px;
+    width: 500px;
     display: flex;
     justify-content: center;
+}
+
+.actions__button:hover{
+    background-color: #FFFFFF;
+    color: #000000;
+    cursor: pointer;
+}
+
+.actions__block>label:hover{
+    cursor: pointer;
 }
 
 .actions__form{
