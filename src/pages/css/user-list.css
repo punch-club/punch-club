@@ -1,0 +1,90 @@
+.user-list {
+  padding: 15px;
+  background-color: var(--accent-color-dark);
+
+}
+
+.user-list__player-stats {
+  display: flex;
+  background-color: var(--accent-color);
+  
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.user-list__player-img {
+  border-radius: 50%;
+}
+
+.user-list__player-text {
+  color: var(--accent-text-light);
+
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.user-list__player-name {
+  margin: 0;
+  font-size: 16px;
+}
+
+.user-list__player-wins {
+  display: flex;
+}
+
+.user-list__player-wins-count {
+  margin-right: 5px;
+}
+
+.user-list__player-loss {
+  display: flex;
+}
+
+.user-list__player-loss-count {
+  margin-right: 5px;
+}
+
+/* search */
+.user-list__search {
+  margin-top: 10px;
+}
+
+.user-list__search-input {
+  width: 100%;
+  border: 0;
+
+  padding: 10px;
+  border-radius: 3px;
+  outline: none;
+
+  font-size: 14px;
+  color: var(--accent-text-light);
+  background-color: var(--accent-color);
+}
+
+.user-list__search-input::placeholder { 
+  color: var(--accent-text-light);
+}
+
+/* all players */
+.user-list__all-players {
+  padding: 0;
+  color: var(--accent-text-light);
+}
+
+.user-list__player {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+.user-list__player:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.user-list__all-players-name {
+  margin: 0;
+  margin-left: 5px;
+  font-size: 14px;
+  font-weight: 400;
+}

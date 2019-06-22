@@ -1,16 +1,18 @@
 .header {
   display: flex;
   align-items: center;
-  padding: 0 15px;
+  padding: 0 25px 0 15px;
 
-  height: 60px;
-  background-color: #dfdfdf;
+  height: 75px;
+  background-color: var(--accent-color-dark);
+  border-bottom: 2px solid var(--accent-color);
+  box-sizing: border-box;
 }
 
 .header__logo-link {
   display: flex;
   align-items: center;
-  margin-right: 150px;
+  margin-right: 135px;
 }
 
 .header__logo {
@@ -27,7 +29,8 @@
   font-weight: 700;
   text-transform: uppercase;
 
-  background-color: #C6132B;
+  box-shadow: 0 0 10px #c6132b;
+  background-color: #c6132b;
   border-radius: 2px;
   border: 0;
 
