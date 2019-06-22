@@ -8,9 +8,8 @@ class Chat extends HTMLElement {
         const template = thisDocument.querySelector('#tmpl-chat');
         this.shadowRootEl.appendChild(template.content.cloneNode(true));
 
-
-        const send  = this.shadowRootEl.querySelector('.send');
-        sessionStorage.setItem('token','2LVhw-IoNR');
+        const send = this.shadowRootEl.querySelector('.send');
+        sessionStorage.setItem('token','6VcbW7n5XA');
         this.token = sessionStorage.getItem('token');
 
         console.log(this.shadowRootEl.querySelector('.chat'));
@@ -59,7 +58,7 @@ class Chat extends HTMLElement {
                     const message = '<div class="player"> '+
                         '<div class="player__logo"></div>'+
                         '<div class="message__info">' +
-                            '<div class="player__name">'+ chatElement.user.username  +'</div>'+ 
+                            '<div class="player__name">'+ chatElement.user.username +'</div>'+ 
                             '<div class="player__message">' + chatElement.message +'</div>' +
                         '</div>'+
                     '</div>'; 
