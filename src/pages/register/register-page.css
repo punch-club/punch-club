@@ -1,0 +1,134 @@
+.register__wrapper {
+    display: flex;
+    position: relative;
+    justify-content: center;
+
+    background: url(register-bg.jpg) center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.register {
+    display: flex;
+
+    margin: auto 0;
+
+    min-width: 800px;
+    box-shadow: 0 0 35px rgba(155, 155, 155, 0.5);
+    background-color: #fff;
+
+    border-radius: 5px;
+}
+
+.register:hover {
+    box-shadow: 0 0 55px rgba(155, 155, 155, 0.7);
+}
+
+.register__left-side {
+    display: flex;
+    flex-basis: 50%;
+}
+
+.register__left-side-img {
+    width: 400px;
+    height: 100%;
+
+    border-radius: 5px 0 0 5px;
+    object-fit: cover;
+}
+
+.register__right-side {
+    display: flex;
+    flex-basis: 50%;
+
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 50px;
+}
+
+.register__title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    color: #4e4e4e;
+    font-size: 18px;
+}
+
+.register__title span {
+    font-size: 24px;
+}
+
+.register__logo {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.register__form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.register__input {
+    width: inherit;
+    margin: 5px 0;
+    padding: 20px 25px;
+
+    font-size: 16px;
+    color: #4e4e4e;
+    background-color: #e7e7e7;
+
+    border-radius: 35px;
+    border: 0;
+
+    box-sizing: border-box;
+    outline: none;
+}
+
+.register__input:focus {
+    transition: .4s;
+    background-color: #d4d4d4;
+}
+
+.register__button {
+    width: inherit;
+    margin: 25px 0 15px 0;
+    padding: 20px;
+
+    color: #fff;
+    background-color: #e40c29;
+    font-size: 16px;
+
+    border-radius: 35px;
+    border: 0;
+    box-shadow: 0 1px 15px rgba(228, 12, 41, 0.5);
+
+    cursor: pointer;
+    outline: none;
+}
+
+.register__button:hover {
+    transition: .4s;
+    background-color: #c70e26;
+}
+
+.register__acc-question {
+    margin: 0;
+    color: #9b9b9b;
+}
+
+a.register__sign-in-mode:active,
+a.register__sign-in-mode {
+    text-decoration: none;
+    color: #e40c29;
+}
+
+a.register__sign-in-mode:hover {
+    color: #c6132b;
+}
