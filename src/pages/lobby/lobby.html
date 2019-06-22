@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Punch Club | Lobby</title>
 
-    <link rel="stylesheet" href="../css/index.css" />
-    <link rel="stylesheet" href="lobby.css" />
-    <link rel="stylesheet" href="../css/user-list.css" />
-    <link rel="stylesheet" href="../css/chat.css" />
+    <link rel="stylesheet" href="/pages/css/index.css" />
+    <link rel="stylesheet" href="/pages/lobby/lobby.css" />
+    <link rel="stylesheet" href="/pages/css/user-list.css" />
+    <link rel="stylesheet" href="/pages/css/chat.css" />
   </head>
 
   <body>
@@ -17,7 +17,7 @@
       <a class="header__logo-link" href="#">
         <img class="header__logo" src="../../img/logo-header.png" alt="" />
       </a>
-      <button class="header__fight-button">
+      <button class="header__fight-button" onclick="window.location.href='/battle'">
         <img
           class="header__fight-button-icon"
           src="../../img/icons/swords.svg"
@@ -63,13 +63,13 @@
             alt="Аватар пользователя"
           />
           <div class="user-list__player-text">
-            <h2 class="user-list__player-name">Nickname</h2>
-            <span class="user-list__player-wins">
+            <h2 class="user-list__player-name"></h2>
+            <!-- <span class="user-list__player-wins">
               <span class="user-list__player-wins-count">20</span>побед
             </span>
             <span class="user-list__player-loss">
               <span class="user-list__player-loss-count">10</span>поражений
-            </span>
+            </span> -->
           </div>
         </div>
 
@@ -169,5 +169,10 @@
       <!-- END CHAT SECTION -->
     </main>
     <!-- END LOBBY -->
+
+    <script>
+      const user = JSON.parse(sessionStorage.getItem('user'));
+      document.querySelector('.user-list__player-name').textContent = user.username;
+    </script>
   </body>
 </html>
