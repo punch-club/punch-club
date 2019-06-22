@@ -7,3 +7,58 @@ body {
   box-sizing: border-box;
   padding: 0 5%;
 }
+.actions {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+}
+.actions__block {
+  width: 225px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 5px;
+  color: grey;
+}
+.actions__block-name {
+  font-size: 16px;
+  color: grey;
+  text-align: center;
+}
+.actions__img {
+  max-width: 20px;
+  max-height: 20px;
+}
+.actions__button {
+  width: 100px;
+  height: 35px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  border-radius: 15px;
+  background-color: #000000;
+  color: #FFFFFF;
+  border: 2px solid #000000;
+}
+.button__block {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+}
+.actions__button:hover {
+  background-color: #FFFFFF;
+  color: #000000;
+  cursor: pointer;
+}
+.actions__block > label:hover {
+  cursor: pointer;
+}
+.actions__block > label {
+  margin: 1px;
+}
+.actions__form {
+  width: 500px;
+  border: 1px solid #000000;
+}
+.actions__checkbox {
+  height: 20px;
+}

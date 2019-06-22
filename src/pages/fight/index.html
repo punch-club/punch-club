@@ -1,44 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <script src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
-  <link rel="stylesheet" href="index.css">
-  <link rel="import" href="../../components/personage-status/index.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="import" href="../../components/personage-status/index.html">
 </head>
+
 <body>
     <personage-status class="you"></personage-status>
+    <form action="" method="POST" class="actions__form">
+        <div class="actions">
+            <div class="actions__block">
+                <h1 class="actions__block-name">Атака</h1>
+                <label>
+                    <input type="radio" name="attack" class="actions__checkbox attack" value="1"><img
+                        class="actions__img" src="img/helm.png" alt=""> Удар в голову</input>
+                </label>
+                <label>
+                    <input type="radio" name="attack" class="actions__checkbox attack" value="2"><img
+                        class="actions__img" src="img/armor.png" alt=""> Удар в корпус</input>
+                </label>
+                <label>
+                    <input type="radio" name="attack" class="actions__checkbox attack" value="3"><img
+                        class="actions__img" src="img/Rectangle.png" alt=""> Удар в пояс</input>
+                </label>
+                <label>
+                    <input type="radio" name="attack" class="actions__checkbox attack" value="4"><img
+                        class="actions__img" src="img/pants.png" alt=""> Удар по ногам</input>
+                </label>
+            </div>
+
+            <div class="actions__block">
+                <h1 class="actions__block-name">Защита</h1>
+                <label>
+                    <input type="radio" name="defense" class="actions__checkbox" value="1+2"><img class="actions__img"
+                        src="img/helm.png" alt=""><img class="actions__img" src="img/armor.png" alt=""> Блок головы и
+                    корпуса</input>
+                </label>
+                <label>
+                    <input type="radio" name="defense" class="actions__checkbox" value="2+3"><img class="actions__img"
+                        src="img/armor.png" alt=""><img class="actions__img" src="img/Rectangle.png" alt=""> Блок
+                    корпуса и
+                    пояса</input>
+                </label>
+                <label>
+                    <input type="radio" name="defense" class="actions__checkbox" value="3+4"><img class="actions__img"
+                        src="img/Rectangle.png" alt=""><img class="actions__img" src="img/pants.png" alt=""> Блок пояса
+                    и
+                    ног</input>
+                </label>
+                <label>
+                    <input type="radio" name="defense" class="actions__checkbox" value="1+4"><img class="actions__img"
+                        src="img/helm.png" alt=""><img class="actions__img" src="img/pants.png" alt=""> Блок головы и
+                    ног</input>
+                </label>
+            </div>
+        </div>
+        <div class="button__block">
+            <button class="actions__button" type="submit">Сделать ход</button>
+        </div>
+    </form>
     <personage-status class="enemy"></personage-status>
-  <script>
-    let one = JSON.stringify({
-        you: {
-            username: 'Your Name',
-            health: 30
-        },
-        enemy: {
-            username: 'Enemy Name',
-            health: 30
-        }
-    });
-    sessionStorage.setItem('battle', one);
-    document.querySelectorAll('personage-status').forEach(person => {
-        person.dispatchEvent(new Event('start'));
-    });
-    one = JSON.stringify({
-        you: {
-            health: 10
-        },
-        enemy: {
-            health: 5
-        }
-    });
-    sessionStorage.setItem('battle', one);
-    document.querySelectorAll('personage-status').forEach(person => {
-        person.dispatchEvent(new Event('update'));
-    });
-  </script>
+    <script src="./index.js"></script>
+
+    <script>
+        let one = JSON.stringify({
+            you: {
+                username: 'Your Name',
+                health: 30
+            },
+            enemy: {
+                username: 'Enemy Name',
+                health: 30
+            }
+        });
+        sessionStorage.setItem('battle', one);
+        document.querySelectorAll('personage-status').forEach(person => {
+            person.dispatchEvent(new Event('start'));
+        });
+        one = JSON.stringify({
+            you: {
+                health: 10
+            },
+            enemy: {
+                health: 5
+            }
+        });
+        sessionStorage.setItem('battle', one);
+        document.querySelectorAll('personage-status').forEach(person => {
+            person.dispatchEvent(new Event('update'));
+        });
+    </script>
 </body>
+
 </html>
