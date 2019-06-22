@@ -20,21 +20,21 @@ registerForm.addEventListener('submit', function(event){
 });
 
 var register = false;
-var registerMode = document.querySelector('.register__SignInMode');
+var registerMode = document.querySelector('.register__sign-in-mode');
 registerMode.addEventListener('click', function(){
     register = !register;
     if (register){   
-        document.querySelector('.register__AccQuestion')
+        document.querySelector('.register__acc-question')
             .textContent = 'Нет аккаунта?';
-        document.querySelector('.register__SignInMode')
+        document.querySelector('.register__sign-in-mode')
             .textContent = 'Зарегистрироваться';
         document.querySelector('.register__button')
             .textContent = 'Войти';
     } else {
-        document.querySelector('.register__AccQuestion')
+        document.querySelector('.register__acc-question')
             .textContent = 'Есть аккаунт?';
-        document.querySelector('.register__SignInMode')
-            .textContent = 'Авторизация';
+        document.querySelector('.register__sign-in-mode')
+            .textContent = 'Войти';
         document.querySelector('.register__button')
             .textContent = 'Зарегистрироваться';
     }
