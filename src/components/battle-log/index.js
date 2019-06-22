@@ -15,8 +15,7 @@ class BattleLog extends HTMLElement {
         const yourMsgTmpl = thisDocument.getElementById('battle-msg-your');
         const enemyMsgTmpl = thisDocument.getElementById('battle-msg-enemy');
 
-        const you = 'admin';
-
+        
         // очки здоровья игроков
         let yourHP = 30;
         let enemyHP = 30;
@@ -24,51 +23,56 @@ class BattleLog extends HTMLElement {
         // сделано ходов
         let stepsCount = 0;
 
-        setTimeout(() => {
+        this.addEventListener('battleLog', (e) => {
             // статус и результаты боя
-            const status = this.getBattleStatus();
-
-            if (status.results.length === stepsCount) {
-                return;
-            }
+            // const status = this.getBattleStatus();
 
             // массив с данными о последнем ходе
-            const step = status.results[stepsCount];
+            const step = e.detail[stepsCount];
+
+            // данные о бое
+            let battle = JSON.parse(localStorage.getItem('battle'));
 
             // разница в здоровье после хода
-            let yourDiffHP = yourHP - status.you.health;
-            let enemyDiffHP = enemyHP - status.enemy.health;
+            let yourDiffHP = yourHP - battle.you.health;
+            let enemyDiffHP = enemyHP - battle.enemy.health;
 
             // обновление данных о здоровье
-            yourHP = status.you.health;
-            enemyHP = status.enemy.health;
+            yourHP = battle.you.health;
+            enemyHP = battle.enemy.health;
 
-            // никнейм противника
-            const enemy = status.enemy.username;
+            // никнеймы
+            const you = battle.you.username;
+            const enemy = battle.enemy.username;
             
             step.forEach(item => {
                 let diffHp = enemyDiffHP;
                 let atackMsgTmpl = yourMsgTmpl.content.cloneNode(true);
                 let blockMsgTmpl = enemyMsgTmpl.content.cloneNode(true);
+                let atackName = you;
+                let blockName = enemy;
 
                 if (item.origin.username !== you) {
                     diffHp = yourDiffHP;
                     atackMsgTmpl = enemyMsgTmpl.content.cloneNode(true);
                     blockMsgTmpl = yourMsgTmpl.content.cloneNode(true);
+                    atackName = enemy;
+                    blockName = you;
                 }
 
                 // атака
-                const atackMsg = this.getAttackMsg(atackMsgTmpl, you, item.hit);
+                const atackMsg = this.getAttackMsg(atackMsgTmpl, atackName, item.hit);
                 msgContainer.appendChild(atackMsg);
 
                 // блок
-                const blockMsg = this.getBlockMsg(blockMsgTmpl, enemy, diffHp);
-                msgContainer.appendChild(blockMsg);               
+                const blockMsg = this.getBlockMsg(blockMsgTmpl, blockName, diffHp);
+                msgContainer.appendChild(blockMsg);    
+                
             });
 
             stepsCount++;
 
-        }, 1000);
+        });
 
     }
 
