@@ -5,8 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <!-- web-components -->
+    <link rel="import" href="./components/battle-log/index.html">
 </head>
 <body>
     Здесь панчклаб
+    <br>
+    <battle-log></battle-log>
+
+    <script>
+
+        
+        // localstorag test
+        localStorage.setItem('battle', JSON.stringify({
+            you: {
+                username: 'admin',
+                health: 25 
+            },
+            enemy: {
+                username: 'dusty',
+                health: 28 
+            }
+        }));
+
+        document.querySelector('battle-log')
+            .dispatchEvent(new CustomEvent('battleLog', { 'detail': [
+            [
+                {
+                    "origin": {
+                        "id": "yS8aUb",
+                        "username": "dusty",
+                        "last_active": 1526212321426
+                    },
+                    "target": {
+                        "id": "WOBqSz",
+                        "username": "admin",
+                        "last_active": 1526213320805
+                    },
+                    "hit": 1,
+                    "blocked": false
+                },
+                {
+                    "origin": {
+                        "id": "WOBqSz",
+                        "username": "admin",
+                        "last_active": 1526213320805
+                    },
+                    "target": {
+                        "id": "yS8aUb",
+                        "username": "dusty",
+                        "last_active": 1526212321426
+                    },
+                    "hit": 2,
+                    "blocked": true
+                }
+            ],
+            [
+                {
+                    "origin": {
+                        "id": "WOBqSz",
+                        "username": "admin",
+                        "last_active": 1526213592196
+                    },
+                    "target": {
+                        "id": "yS8aUb",
+                        "username": "dusty",
+                        "last_active": 1526213638265
+                    },
+                    "hit": 2,
+                    "blocked": true
+                },
+                {
+                    "origin": {
+                        "id": "yS8aUb",
+                        "username": "dusty",
+                        "last_active": 1526213638265
+                    },
+                    "target": {
+                        "id": "WOBqSz",
+                        "username": "admin",
+                        "last_active": 1526213592196
+                    },
+                    "hit": 1,
+                    "blocked": false
+                }
+            ],
+            [
+                {
+                    "origin": {
+                        "id": "yS8aUb",
+                        "username": "dusty",
+                        "last_active": 1526213697299
+                    },
+                    "target": {
+                        "id": "WOBqSz",
+                        "username": "admin",
+                        "last_active": 1526213764075
+                    },
+                    "hit": 1,
+                    "blocked": false
+                },
+                {
+                    "origin": {
+                        "id": "WOBqSz",
+                        "username": "admin",
+                        "last_active": 1526213764075
+                    },
+                    "target": {
+                        "id": "yS8aUb",
+                        "username": "dusty",
+                        "last_active": 1526213697299
+                    },
+                    "hit": 4,
+                    "blocked": false
+                }
+            ]
+        ]}));
+
+        
+    </script>
 </body>
 </html>
