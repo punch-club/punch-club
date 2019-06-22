@@ -1,40 +1,173 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Punch Club | Lobby</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Punch Club | Lobby</title>
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="lobby.css" />
+    <link rel="stylesheet" href="../css/user-list.css" />
+    <link rel="stylesheet" href="../css/chat.css" />
+  </head>
 
-  <link rel="stylesheet" href="../css/index.css">
-  <link rel="stylesheet" href="lobby.css">
-</head>
+  <body>
+    <header class="header">
+      <a class="header__logo-link" href="#">
+        <img class="header__logo" src="../../img/logo-header.png" alt="" />
+      </a>
+      <button class="header__fight-button">
+        <img
+          class="header__fight-button-icon"
+          src="../../img/icons/swords.svg"
+          width="15"
+        />В бой
+      </button>
 
-<body>
-  <header class="header">
-    <a class="header__logo-link" href="#">
-      <img class="header__logo" src="../../img/logo-header.png" alt="">
-    </a>
-    <button class="header__fight-button">
-      <img class="header__fight-button-icon" src="../../img/icons/swords.svg" width="15">В бой
-    </button>
+      <div class="header__user-control">
+        <!-- <span class="header__notifications">
+          <img
+            class="header__notifications-icon"
+            src="../../img/icons/notification.svg"
+            width="25"
+            alt="Уведомления пользователя"
+          />
+        </span> -->
+        <span class="header__user-management">
+          <img
+            class="header__user-management-icon"
+            src="../../img/test-avatar.png"
+            width="35"
+            alt="Аватар пользователя"
+          />
+          <!-- <img
+            class="header__user-management-arrow-icon"
+            src="../../img/icons/arrow.svg"
+            width="15"
+          /> -->
+        </span>
+      </div>
+    </header>
 
-    <div class="header__user-control">
-      <span class="header__notifications">
-        <img class="header__notifications-icon" src="../../img/icons/notification.svg" width="25" alt="Уведомления пользователя">
-      </span>
-      <span class="header__user-management">
-        <img class="header__user-management-icon" src="../../img/test-avatar.png" width="35" alt="Аватар пользователя">
-        <img class="header__user-management-arrow-icon" src="../../img/icons/arrow.svg" width="15">
-      </span>
-    </div>
-  </header>
+    <!-- BEGIN LOBBY -->
+    <main class="lobby">
+      <!-- BEGIN USER-LIST SECTION -->
+      <section class="user-list">
+        <div class="user-list__player-stats">
+          <img
+            class="user-list__player-img"
+            src="../../img/test-avatar.png"
+            width="35"
+            height="35"
+            alt="Аватар пользователя"
+          />
+          <div class="user-list__player-text">
+            <h2 class="user-list__player-name">Nickname</h2>
+            <span class="user-list__player-wins">
+              <span class="user-list__player-wins-count">20</span>побед
+            </span>
+            <span class="user-list__player-loss">
+              <span class="user-list__player-loss-count">10</span>поражений
+            </span>
+          </div>
+        </div>
 
-  <main class="lobby">
-    <section class="user-list">1</section>
-    <section class="chat">2</section>
-  </main>
-</body>
+        <div class="user-list__search">
+          <input
+            class="user-list__search-input"
+            type="search"
+            placeholder="Поиск игроков"
+          />
+        </div>
 
+        <ul class="user-list__all-players">
+          <li class="user-list__player">
+            <img
+              class="user-list__player-img"
+              src="../../img/logo.png"
+              width="35"
+              height="35"
+              alt="Аватар пользователя"
+            />
+            <p class="user-list__all-players-name">user</p>
+          </li>
+          <li class="user-list__player">
+            <img
+              class="user-list__player-img"
+              src="../../img/logo.png"
+              width="35"
+              height="35"
+              alt="Аватар пользователя"
+            />
+            <p class="user-list__all-players-name">user1</p>
+          </li>
+          <li class="user-list__player">
+            <img
+              class="user-list__player-img"
+              src="../../img/logo.png"
+              width="35"
+              height="35"
+              alt="Аватар пользователя"
+            />
+            <p class="user-list__all-players-name">user2</p>
+          </li>
+        </ul>
+      </section>
+      <!-- END USER-LIST SECTION -->
+
+      <!-- BEGIN CHAT SECTION -->
+      <section class="chat">
+        <h1 class="chat__title">Чат</h1>
+
+        <!-- message list -->
+        <ul class="chat__list">
+          <li class="chat__player">
+            <div class="chat__player-message">
+              <img
+                class="user-list__player-img"
+                src="../../img/logo.png"
+                width="35"
+                height="35"
+                alt="Аватар пользователя"
+              />
+              <div class="chat__message">
+                <div class="chat__player-name">user</div>
+                <div class="chat__player-message-text">Йо, тестовый текст</div>
+              </div>
+            </div>
+          </li>
+          <li class="chat__player">
+            <div class="chat__player-message">
+              <img
+                class="user-list__player-img"
+                src="../../img/logo.png"
+                width="35"
+                height="35"
+                alt="Аватар пользователя"
+              />
+              <div class="chat__message">
+                <div class="chat__player-name">user 2</div>
+                <div class="chat__player-message-text">Привет</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- message input -->
+        <div class="chat__input-wrapper">
+            <img
+            class="chat__send-btn"
+            src="../../img/icons/sent-mail.svg"
+            width="25"
+            height="25"
+            alt="Аватар пользователя"
+          />
+          <input class="chat__input" type="text" placeholder="Введите сообщение...">
+        </div>
+      </section>
+      <!-- END CHAT SECTION -->
+    </main>
+    <!-- END LOBBY -->
+  </body>
 </html>
