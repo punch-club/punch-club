@@ -10,8 +10,8 @@ class Chat extends HTMLElement {
 
 
         const send  = this.shadowRootEl.querySelector('.send');
-        localStorage.setItem('token','v4S8wLCa4L');
-        this.token = localStorage.getItem('token');
+        sessionStorage.setItem('token','2LVhw-IoNR');
+        this.token = sessionStorage.getItem('token');
 
         console.log(this.shadowRootEl.querySelector('.chat'));
         send.addEventListener('click', this.handleClick);
@@ -30,9 +30,10 @@ class Chat extends HTMLElement {
             body: 'message=' + inputMessage.value + '&token=' + this.token     
         }
 
-        fetch(this.url,options)
-            .then(function() {
-                self.getMessages();
+        fetch(this.url, options)
+            .then(() => {
+                inputMessage.value = '';
+                this.getMessages();
             })
             .catch(err => console.log('error' + err));
         

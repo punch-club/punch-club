@@ -20,6 +20,11 @@ registerForm.addEventListener('submit', function(event){
     })
         .then(function(response){
             return response.json();
+        
+        }).then(function(response){
+            console.log(response);
+            // localStorage.setItem('token',response.user.token);
+        
         });
 });
 
@@ -27,7 +32,7 @@ var register = false;
 var registerMode = document.querySelector('.register__SignInMode');
 registerMode.addEventListener('click', function(){
     register = !register;
-    if (register === true){   
+    if (register){   
         document.querySelector('.register__AccQuestion')
             .textContent = 'Нет аккаунта?';
         document.querySelector('.register__SignInMode')
@@ -35,7 +40,7 @@ registerMode.addEventListener('click', function(){
         document.querySelector('.register__button')
             .textContent = 'Войти';
     }
-    if (register === false) {
+    else {
         document.querySelector('.register__AccQuestion')
             .textContent = 'Есть аккаунт?';
         document.querySelector('.register__SignInMode')
