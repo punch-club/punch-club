@@ -51,7 +51,15 @@
     cursor: pointer;
 }
 
+.actions__block>label{
+    margin:1px;
+}
+
 .actions__form{
     width: 500px;
     border: 1px solid #000000;
+}
+
+.actions__checkbox{
+    height: 20px;
 }
