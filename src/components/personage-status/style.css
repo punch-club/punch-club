@@ -2,8 +2,8 @@
   font-family: Arial, Helvetica, sans-serif;
   background-color: #fd7c7c;
   box-sizing: border-box;
-  width: 500px;
-  height: 850px;
+  width: 43.5vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -23,10 +23,8 @@
   background-repeat: no-repeat;
   background-color: #EAEAEA;
   background-clip: border-box;
-  background-image: linear-gradient(to right, #96EE26 50%, #EAEAEA 50%);
-  background-size: 140%;
   height: 7.5%;
-  margin: 0 4%;
+  margin: 0 2%;
   border-radius: 2.5% / 16%;
   font-size: 2rem;
   font-weight: 700;
@@ -40,4 +38,30 @@
   height: 78%;
   margin: 4%;
   border-radius: 2.5% / 1.7%;
+}
+.hp {
+  margin: 0 2%;
+}
+.pers-view {
+  padding-top: 5%;
+  box-sizing: border-box;
+}
+.pers-view__part {
+  width: 100%;
+  height: 25%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.pers-view__part_head {
+  background-image: url(../../img/head.svg);
+  height: 20%;
+}
+.pers-view__part_chest {
+  background-image: url(../../img/Armor.svg);
+  height: 35%;
+}
+.pers-view__part_legs {
+  background-image: url(../../img/legs.svg);
+  height: 40%;
 }

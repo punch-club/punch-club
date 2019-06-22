@@ -6,11 +6,39 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <script src="../../../node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+  <link rel="stylesheet" href="index.css">
   <link rel="import" href="../../components/personage-status/index.html">
 </head>
 <body>
-  <div id="root">
-    <personage-status></personage-status>
-  </div>
+    <personage-status class="you"></personage-status>
+    <personage-status class="enemy"></personage-status>
+  <script>
+    let one = JSON.stringify({
+        you: {
+            username: 'Your Name',
+            health: 30
+        },
+        enemy: {
+            username: 'Enemy Name',
+            health: 30
+        }
+    });
+    sessionStorage.setItem('battle', one);
+    document.querySelectorAll('personage-status').forEach(person => {
+        person.dispatchEvent(new Event('start'));
+    });
+    one = JSON.stringify({
+        you: {
+            health: 10
+        },
+        enemy: {
+            health: 5
+        }
+    });
+    sessionStorage.setItem('battle', one);
+    document.querySelectorAll('personage-status').forEach(person => {
+        person.dispatchEvent(new Event('update'));
+    });
+  </script>
 </body>
 </html>
